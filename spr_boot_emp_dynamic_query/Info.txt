@@ -1,0 +1,35 @@
+create table employee (id bigint not null, carrier_code varchar(255), group_code varchar(255), search_key varchar(255), sub_carrier_code varchar(255), primary key (id));
+create sequence hibernate_sequence start with 1 increment by 1;
+
+GET 
+http://localhost:9002/getMyEmployees/A4
+
+POST 
+http://localhost:9002/getMyEmployees
+{
+	"carrierCode":"A4",
+	"subCarrierCode":"AKR"
+}
+
+http://localhost:9002/getMyEmployees2
+
+http://localhost:9002/getMyEmployees3
+
+POST 
+http://localhost:9002/saveEmployee
+
+{
+	"carrierCode":"A4",
+	"subCarrierCode":"AKR",
+	"groupCode": "01700",
+	"searchKey": "abc"
+}
+
+o/p
+{
+    "id": 1,
+    "carrierCode": "A4",
+    "subCarrierCode": "AKR",
+    "groupCode": "01700",
+    "searchKey": "abc"
+}
