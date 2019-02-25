@@ -25,7 +25,7 @@ public class EmployeeController {
 
 	@RequestMapping(value = "/saveEmployee", method = RequestMethod.POST)
 	public Employee saveEmployee(@RequestBody Employee e) {
-		System.out.println("saveEmployee called :");
+		System.out.println("saveEmployee called2 :");
 		Employee employee = new Employee();
 		employee.setCarrierCode(e.getCarrierCode());
 		employee.setSubCarrierCode(e.getSubCarrierCode());
